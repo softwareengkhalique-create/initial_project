@@ -1,4 +1,6 @@
 from enum_direction import Direction
+import pytest
+import sys
 
 def main():
     current_direction = Direction.UP
@@ -10,4 +12,18 @@ def main():
     
     print("End of program!")
 
-main()
+import pytest
+import sys
+
+if __name__ == "__main__":
+    # Run pytest on the current directory
+    exit_code = pytest.main(["."])
+    
+    # If exit_code is 0, it means tests passed
+    if exit_code == 0:
+        print("✅ Tests passed! Starting program...\n")
+        # --- Your actual program logic starts here ---
+        main()
+    else:
+        print("❌ Tests failed. Program aborted.")
+        sys.exit(exit_code)
