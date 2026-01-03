@@ -1,5 +1,6 @@
 from enum_direction import Direction
 import pytest
+
 import sys
 
 def main():
@@ -24,6 +25,7 @@ if __name__ == "__main__":
         print("✅ Tests passed! Starting program...\n")
         # --- Your actual program logic starts here ---
         main()
+        print("Program completed!")
     else:
         print("❌ Tests failed. Program aborted.")
         sys.exit(exit_code)
